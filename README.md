@@ -22,3 +22,5 @@ sprema ih u datoteke. Ovaj notebook se treba pokrenuti za genriranje datoteke ra
 u apiju.<br>
 DeepL_Model_Vehicles.ipynb  -  Isprobavanje deep learning neuralnih mreza za predvidanje cijene. Nije koristeno dalje.<br>
 Izvjestaj.ipynb  - Izvjestaj o rjesavanju zadatka.
+<br><br>
+Exportani docker container: https://drive.google.com/file/d/1iprs2o8kHmUjFJvMAUAxDgU-y9u_oYDW/view?usp=sharing
