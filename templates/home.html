@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="login">
+        <h1>Predvidanje cijene vozila</h1>
+
+        <p>U sljedecu formu upisite podatke o vozilu i kliknite Predict za predvidanje cjene!</p>
+        <p>Primjer podataka o vozilu:</p>
+        <pre>
+            <code>
+{
+    "region": "auburn",
+    "year": 2015,
+    "manufacturer": "gmc",
+    "model": "sierra 1500 regular cab",
+    "condition": "good",
+    "cylinders": 6,
+    "fuel": "other",
+    "odometer": 35290,
+    "title_status": "clean",
+    "transmission": "other",
+    "drive": "4wd",
+    "type": "pickup",
+    "paint_color": "white",
+    "state": "al",
+    "lat": 32.59,
+    "long": -85.48,
+    "posting_date": "2021-04-28T11:01:06",
+    "VIN": "1GTN1TEH9FZ243281"
+}
+
+            </code>
+        </pre>
+
+             <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+            <input type="text" name="region" placeholder="region" required="required" /><br>
+            <input type="text" name="year" placeholder="year" required="required" /><br>
+            <input type="text" name="manufacturer" placeholder="manufacturer" required="required" /><br>
+            <input type="text" name="model" placeholder="model" required="required" /><br>
+            <input type="text" name="condition" placeholder="condition" required="required" /><br>
+            <input type="text" name="cylinders" placeholder="cylinders" required="required" /><br>
+            <input type="text" name="fuel" placeholder="fuel" required="required" /><br>
+            <input type="text" name="odometer" placeholder="odometer" required="required" /><br>
+            <input type="text" name="title_status" placeholder="title_status" required="required" /><br>
+            <input type="text" name="transmission" placeholder="transmission" required="required" /><br>
+            <input type="text" name="drive" placeholder="drive" required="required" /><br>
+            <input type="text" name="type" placeholder="type" required="required" /><br>
+            <input type="text" name="paint_color" placeholder="paint_color" required="required" /><br>
+            <input type="text" name="state" placeholder="state" required="required" /><br>
+            <input type="text" name="lat" placeholder="lat" required="required" /><br>
+            <input type="text" name="long" placeholder="long" required="required" /><br>
+            <input type="text" name="posting_date" placeholder="posting_date" required="required" /><br>
+            <input type="text" name="VIN" placeholder="VIN" required="required" /><br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <br>
+        <br>
+
+
+    </div>
+    {{prediction_text}}
+
+</body>
+</html>
