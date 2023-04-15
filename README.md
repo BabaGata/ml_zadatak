@@ -1,5 +1,5 @@
 # ml_zadatak
-Tu se nalazi api aplikacija, sa templateom, Dockerfileom, requirements.txt i sa ordinal_encoder.pkl.<br>
+Tu se nalazi api aplikacija sa templateom, Dockerfileom, requirements.txt i sa ordinal_encoder.pkl.<br>
 Za normalno funkcioniranje aplikacije potreban je jos file random_forest_model.pkl koji se moze skinuti sa drive-a<br>
 https://drive.google.com/file/d/17ckASaujKpy_bQnYkHaqeyBnogAsgM7p/view?usp=sharing<br>
 ili pokretanjem .ipynb datoteke ML_Model_Vehicles.ipynb.<br>
